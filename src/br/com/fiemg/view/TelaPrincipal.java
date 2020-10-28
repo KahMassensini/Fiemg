@@ -14,6 +14,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         menCadastro = new javax.swing.JMenu();
         menItemCadUsu = new javax.swing.JMenuItem();
+        menItemCadAluno = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
 
@@ -23,14 +24,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
         areaTrabalho.setLayout(areaTrabalhoLayout);
         areaTrabalhoLayout.setHorizontalGroup(
             areaTrabalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 454, Short.MAX_VALUE)
+            .addGap(0, 478, Short.MAX_VALUE)
         );
         areaTrabalhoLayout.setVerticalGroup(
             areaTrabalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 349, Short.MAX_VALUE)
+            .addGap(0, 385, Short.MAX_VALUE)
         );
 
         menCadastro.setText("Cadastro");
+        menCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menCadastroActionPerformed(evt);
+            }
+        });
 
         menItemCadUsu.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.ALT_MASK));
         menItemCadUsu.setText("Cadastro de Usuário");
@@ -40,6 +46,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         menCadastro.add(menItemCadUsu);
+
+        menItemCadAluno.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK));
+        menItemCadAluno.setText("Cadastro de Aluno");
+        menItemCadAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menItemCadAlunoActionPerformed(evt);
+            }
+        });
+        menCadastro.add(menItemCadAluno);
 
         jMenuBar1.add(menCadastro);
 
@@ -62,7 +77,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addComponent(areaTrabalho)
         );
 
-        setSize(new java.awt.Dimension(470, 411));
+        setSize(new java.awt.Dimension(494, 447));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -71,6 +86,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
         cd.setVisible(true);
         areaTrabalho.add(cd);
     }//GEN-LAST:event_menItemCadUsuActionPerformed
+
+    private void menItemCadAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menItemCadAlunoActionPerformed
+        CadAluno ca = new CadAluno();
+        ca.setVisible(true);
+        areaTrabalho.add(ca);
+    }//GEN-LAST:event_menItemCadAlunoActionPerformed
+
+    private void menCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menCadastroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menCadastroActionPerformed
 
     public static void main(String args[]) {
 
@@ -104,6 +129,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu menCadastro;
+    private javax.swing.JMenuItem menItemCadAluno;
     private javax.swing.JMenuItem menItemCadUsu;
     // End of variables declaration//GEN-END:variables
 }

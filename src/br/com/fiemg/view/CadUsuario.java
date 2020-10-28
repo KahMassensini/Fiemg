@@ -124,6 +124,7 @@ public class CadUsuario extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
         setTitle("Cadatro de Usuário");
+        setPreferredSize(new java.awt.Dimension(478, 408));
 
         jLabel4.setText("Senha: ");
 
